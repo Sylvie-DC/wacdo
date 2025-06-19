@@ -1,0 +1,51 @@
+body { /*toujours rentrer ces lignes en debut de css pour le pas que la page déborde*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100vw; /* empêche le dépassement horizontal */ 
+}
+
+* { /*idem toujours rentrer pour que les éléments ne dépassent pas e la page*/
+    box-sizing: border-box;
+    overflow-x: hidden; /* masque tout débordement horizontal */
+}
+
+.carre-sur-place-emporter{ 
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    margin-top: 90px;
+    margin-left: 180px;
+}
+  
+
+h1{
+    font-size: 26px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.carre-choix-menu{
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+/*reprendre ici*/
+    align-items: center; /*ne fait rien*/
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    font-size: 26px;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    width: auto;
+    height:202px;
+    border-radius: 8px;
+    border: 2px solid rgb(196, 188, 188) ;
+}

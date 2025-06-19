@@ -1,0 +1,46 @@
+.carre-bonjour{
+    display: flex;
+    background-color:white;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    height:fit-content ;
+    width: fit-content;
+    border-radius:15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); */ pour faire une ombre sue le carré qui est blanc sur blanc*/
+    padding:100px;
+    margin-left:30px;
+    margin-top:-300px;
+
+}
+img{
+    width: 100%;
+}
+.images-choix{
+    display:flex;
+    align-content:center;
+    gap: 60px;
+    margin:auto;
+}
+
+.images-choix img{
+    border: 6px solid #FFC836;
+    padding: 15px;
+    border-radius:15px; /*arrondi des coins*/
+    margin: 30px;
+}
+h1, p{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 30px;
+}
+h1 {
+    font-size:50px;
+}
+p{
+    font-size:30px;
+}
+
+main{
+    display: flex ; /*permet de centrer facilement que que main contient*/
+   
+}
