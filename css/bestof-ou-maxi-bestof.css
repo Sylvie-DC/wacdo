@@ -13,7 +13,7 @@ body { /*toujours rentrer ces lignes en debut de css pour le pas que la page dé
 .carre-sur-place-emporter{ 
     display: flex;
     flex-direction: column;
-    width: auto;
+    width: auto; 
     height: auto;
     margin-top: 90px;
     margin-left: 180px;
