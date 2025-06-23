@@ -34,8 +34,7 @@ p{
     display: flex;
     flex-direction: row;
     gap: 60px;
-/*reprendre ici*/
-    align-items: center; /*ne fait rien*/
+
 }
 
 .menu{

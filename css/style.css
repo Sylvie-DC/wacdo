@@ -7,40 +7,64 @@
     --color-gray-1:#D6D6D6;
     --color-black:#292929;
     --color-gray-2:#F1F1F1;
-
 }
-body{
+body{ /*toujours indiquer*/
     margin: 0;
     padding: 0;
     font-family: "Source Sans 3", sans-serif;
+    box-sizing: border-box;
+    max-width: 100vw;
+}
+* { /*idem toujours rentrer pour que les éléments ne dépassent pas e la page*/
+    box-sizing: border-box;
+    overflow-x: hidden; /* masque tout débordement horizontal */
+}
+p{
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .text-center{
     text-align: center;
 }
 
-.row{
+.row{/*c pour les containers horizontal  avec photos et texte*/
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /*déplacement à la ligne
+     quand la fenêtre rétrécit*/
+    flex-direction: row;
+    
+}
+
+.gap{ /*pour les gaps entre les gros stickers*/
+    gap:1rem;
 }
 
 .strong{
     font-weight: bold;
 }
 
-.homepage{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+.homepage { /*correspond à tout le body incluant buttons et sidebars*/
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  padding-bottom: 30px; /* espace en bas */
 }
 
 header img{
     width: 100%;
 }
 
-
-.home-card{
+.home-card{ /* comme le carré 
+    d'accueil bonjour*/
     position:absolute;
     top:50%;
     left: 50%;
@@ -48,21 +72,145 @@ header img{
     max-width: 698px;
     background-color: #ffffff;
     border-radius: 10px;
-    margin: 0 auto; /* center le block horizontalement */
-    border: 1px var(--color-gray-1) solid;
+    margin: 0 auto; /* center le block horizontalement */  
     padding: 30px;
+    box-shadow: 4px 4px 12px 0 rgba(0, 0, 0, 0.25);
 }
 
 
-/* home cadre */
-.gap{
-    gap:1rem;
-}
-.home-cadre{
+.big-stickers-homepage{ /* stickers sur place ou à emporter page accueil*/
     flex: 0 0 calc((100% - 1rem )/2);
     border: 6px var(--color-yellow) solid;
     box-sizing: border-box;
     border-radius: 20px;
     padding: 40px;
+    text-decoration: none;
+    color: black;
+    
+}
+/***************page choix menu  *********/
+.homepage-choix-menu{ 
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  /* supprime justify-content: flex-end; et align-items:center; */
+  padding-bottom: 30px;
+  overflow-y: auto;
+}
+
+
+.slide-container{ /* c'est le rectangle qui contient les elements*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+   align-items:center;
+    padding: 28px;
+    gap:30px;
+     overflow-x: auto; /* scroll horizontal si nécessaire */
+  flex-wrap: nowrap; /* empêche le retour à la ligne */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.slide-container div { /* tous les div donc flèches et mini-stickers idem*/
+    display: flex;
+    flex-direction: column;
+    color: #6e6e6e;
+    padding: 20px;
+    margin:10px ;
+    max-width:120px;
+    max-height: 120px;
+    align-items: center; /* centrer image et texte horizontalement */
+    text-align: center; /*centrer texte*/
+    overflow: hidden;
+    box-sizing: border-box;
+   
+}
+.mini-stickers{  /* tous les mini stickers 
+    SAUF les flèches pour la bordure*/
+    display: flex;
+    border: 1px solid grey;
+    border-radius: 8px;
+    font-size: 30px;
+   
+}   
+
+.mini-stickers img {
+  max-height: 150px; 
+  max-width: 100%;
+  object-fit: contain;
+}
+.mini-stickers p{
+  margin: 4% 0 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.sandwiches-containers{
+   max-width: 100vw;
+   justify-content: center;
+   padding: 4px;
+   gap: 20px;
+  
+
+}
+.sandwiches-containers div{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #6e6e6e;
+    border-radius: 8px;
+    text-align: center;
+}
+.titre-nos-menus, .desciption{
+    margin-left: 100px;
+ }
+.container {
+  display: flex;
+  height: 100vh; /* ou auto, selon le cas */
+  width: 100vw;
+}
+
+
+.sidebar {
+  width: 309px;
+  background-color: var(--color-gray-2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  height: 100vh;
+  overflow-y:auto;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ********fin de la page choix-menu/////////
+
+/*********PAGE best of ou maxi bewt pf*//////
+
+.big-stickers-third-page { /* problème : 
+    ne s'applique pas */
+  flex: 0 0 calc((100% - 1rem)/2);
+  border: 4px var(--color-gray-1) solid;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 40px;
+}
+
+.button-etape-suivante {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFC836;
+  color: #292929; /* couleur texte : noir léger */
+  border: none;
+  border-radius: 8px;
+  padding: 16px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  gap: 10px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15); /* optionnel pour relief */
+  transition: background-color 0.2s ease;
+  margin-bottom: 40px;
 }
 
