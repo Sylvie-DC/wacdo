@@ -1,27 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
-
-:root{
-    --color-yellow:#FFC836;
-    --color-red:#BD0017;
-    --color-gray-1:#D6D6D6;
-    --color-black:#292929;
-    --color-gray-2:#F1F1F1;
+:root {
+  --color-yellow: #ffc836;
+  --color-red: #bd0017;
+  --color-gray-1: #d6d6d6;
+  --color-black: #292929;
+  --color-gray-2: #f1f1f1;
 }
-body{ /*toujours indiquer*/
-    margin: 0;
-    padding: 0;
-    font-family: "Source Sans 3", sans-serif;
-    box-sizing: border-box;
-    max-width: 100vw;
+body {
+  /*toujours indiquer*/
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans 3", sans-serif;
+  box-sizing: border-box;
+  max-width: 100vw;
 }
-* { /*idem toujours rentrer pour que les éléments ne dépassent pas e la page*/
-    box-sizing: border-box;
-    overflow-x: hidden; /* masque tout débordement horizontal */
+* {
+  /*idem toujours rentrer pour que les éléments ne dépassent pas e la page*/
+  box-sizing: border-box;
+  overflow-x: hidden; /* masque tout débordement horizontal */
 }
-p{
-    font-family: "Source Sans 3", sans-serif;
-    font-size: 14px;
+p {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 14px;
 }
 
 a {
@@ -29,147 +30,176 @@ a {
   color: inherit;
 }
 
-.text-center{
-    text-align: center;
+.text-center {
+  text-align: center;
 }
 
-.row{/*c pour les containers horizontal  avec photos et texte*/
-    display: flex;
-    flex-wrap: wrap; /*déplacement à la ligne
+.row {
+  /*c pour les containers horizontal  avec photos et texte*/
+  display: flex;
+  flex-wrap: wrap; /*déplacement à la ligne
      quand la fenêtre rétrécit*/
-    flex-direction: row;
-    
+  flex-direction: row;
 }
 
-.gap{ /*pour les gaps entre les gros stickers*/
-    gap:1rem;
+.gap {
+  /*pour les gaps entre les gros stickers*/
+  gap: 1rem;
 }
 
-.strong{
-    font-weight: bold;
+.strong {
+  font-weight: bold;
 }
 
-.homepage { /*correspond à tout le body incluant buttons et sidebars*/
+.homepage {
+  /*correspond à tout le body incluant buttons et sidebars*/
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
+  justify-content: flex-start; /*pur aligner les éléments au début 
+  donc ici en haut */
+  align-items: centerflex-start;
   height: 100vh;
   position: relative;
   padding-bottom: 30px; /* espace en bas */
+  width:100vw;
 }
 
-header img{
-    width: 100%;
+header {
+  width:100%;
 }
 
-.home-card{ /* comme le carré 
+.homepage header img {
+  max-width:100vw;       /**ça ne va pas*/
+  height: auto;       
+  display: block;     
+
+}
+
+.home-card {
+  /* comme le carré 
     d'accueil bonjour*/
-    position:absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 698px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    margin: 0 auto; /* center le block horizontalement */  
-    padding: 30px;
-    box-shadow: 4px 4px 12px 0 rgba(0, 0, 0, 0.25);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 698px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin: 0 auto; /* center le block horizontalement */
+  padding: 30px;
+  box-shadow: 4px 4px 12px 0 rgba(0, 0, 0, 0.25);
 }
 
-
-.big-stickers-homepage{ /* stickers sur place ou à emporter page accueil*/
-    flex: 0 0 calc((100% - 1rem )/2);
-    border: 6px var(--color-yellow) solid;
-    box-sizing: border-box;
-    border-radius: 20px;
-    padding: 40px;
-    text-decoration: none;
-    color: black;
-    
+.big-stickers-homepage {
+  /* stickers sur place ou à emporter page accueil*/
+  flex: 0 0 calc((100% - 1rem) / 2);
+  border: 6px var(--color-yellow) solid;
+  box-sizing: border-box;
+  border-radius: 20px;
+  padding: 40px;
+  text-decoration: none;
+  color: black;
 }
 /***************page choix menu  *********/
-.homepage-choix-menu{ 
-  flex: 1;
+.homepage-choix-menu {
+  flex: 1; /****en fait un espace modulable 
+  par rapport à d'autres éléments fixes 
+  comme la sidebar et va occuper 
+  tout l'espace disponible restant*/
   display: flex;
   flex-direction: column;
-  /* supprime justify-content: flex-end; et align-items:center; */
   padding-bottom: 30px;
   overflow-y: auto;
+  
 }
 
-
-.slide-container{ /* c'est le rectangle qui contient les elements*/
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-   align-items:center;
-    padding: 28px;
-    gap:30px;
-     overflow-x: auto; /* scroll horizontal si nécessaire */
+.slide-container {
+  /* contient stickers et flèches**/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 28px;
+  gap: 10px; 
+  overflow-x: auto; /* scroll horizontal si nécessaire */
   flex-wrap: nowrap; /* empêche le retour à la ligne */
   width: 100%;
   box-sizing: border-box;
 }
 
-.slide-container div { /* tous les div donc flèches et mini-stickers idem*/
-    display: flex;
-    flex-direction: column;
-    color: #6e6e6e;
-    padding: 20px;
-    margin:10px ;
-    max-width:120px;
-    max-height: 120px;
-    align-items: center; /* centrer image et texte horizontalement */
-    text-align: center; /*centrer texte*/
-    overflow: hidden;
-    box-sizing: border-box;
-   
+.slider-scroll {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  scroll-behavior: smooth; /* pour éviter le scroll sacadé*/
+   flex-grow: 1; 
+  scrollbar-width: none; /* Firefox masquer barre défilement*/
+  max-width: 100%;
+  -ms-overflow-style: none;
 }
-.mini-stickers{  /* tous les mini stickers 
+.slider-scroll::-webkit-scrollbar {
+  display: none; /* Chrome/Safari masquer barre défilement*/
+}
+
+.mini-stickers {
+  /* tous les mini stickers 
     SAUF les flèches pour la bordure*/
-    display: flex;
-    border: 1px solid grey;
-    border-radius: 8px;
-    font-size: 30px;
-   
-}   
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+  border: 1px solid grey;
+  border-radius: 8px;
+  font-size: 14px;
+  padding: 8px;
+  flex: 0 0 auto; /*pour scroll horizontal*/
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.fleches img {
+  width: 86px;
+  cursor: pointer;
+}
 
 .mini-stickers img {
-  max-height: 150px; 
+  max-height: 150px;
   max-width: 100%;
-  object-fit: contain;
+  object-fit: contain; /*l'image s'adapte au contenu*/
 }
-.mini-stickers p{
-  margin: 4% 0 0;
+.mini-stickers p {
   overflow: hidden;
   white-space: nowrap;
+  text-overflow:ellipsis;
+  width:100%;
+  text-align: center;
+  margin-top: auto; /***pour aligner le texte de tous les stickers*//
 }
 
-.sandwiches-containers{
-   max-width: 100vw;
-   justify-content: center;
-   padding: 4px;
-   gap: 20px;
-  
+.sandwiches-containers {
+  max-width: 100vw;
+  justify-content: center;
+  padding: 4px;
+  gap: 20px;
+}
 
+.sandwiches-containers div {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #6e6e6e;
+  border-radius: 8px;
+  text-align: center;
 }
-.sandwiches-containers div{
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #6e6e6e;
-    border-radius: 8px;
-    text-align: center;
+.titre-nos-menus,
+.desciption {
+  margin-left: 100px;
 }
-.titre-nos-menus, .desciption{
-    margin-left: 100px;
- }
-.container {
+.container { /*body incluant side bar*/
   display: flex;
   height: 100vh; /* ou auto, selon le cas */
   width: 100vw;
 }
-
 
 .sidebar {
   width: 309px;
@@ -179,28 +209,29 @@ header img{
   align-items: center;
   padding: 16px;
   height: 100vh;
-  overflow-y:auto;
+  overflow-y: auto;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
 /* ********fin de la page choix-menu/////////
 
-/*********PAGE best of ou maxi bewt pf*//////
+/*********PAGE best of ou maxi bewt pf*/ 
 
-.big-stickers-third-page { /* problème : 
+.big-stickers-third-page {
+  /* problème : 
     ne s'applique pas */
-  flex: 0 0 calc((100% - 1rem)/2);
+ 
   border: 4px var(--color-gray-1) solid;
   box-sizing: border-box;
   border-radius: 8px;
-  padding: 40px;
+  
 }
 
 .button-etape-suivante {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #FFC836;
+  background-color: #ffc836;
   color: #292929; /* couleur texte : noir léger */
   border: none;
   border-radius: 8px;
@@ -212,5 +243,75 @@ header img{
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15); /* optionnel pour relief */
   transition: background-color 0.2s ease;
   margin-bottom: 40px;
+}
+
+
+
+
+/******** media queries*******/
+
+/*****general*/
+@media screen and (max-width: 768px) {
+  .home-card {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .row {
+    flex-direction: column;/*et oui en row ça ne passe
+     pas sur petit écran*/
+    align-items: center;
+  }
+}
+  /**choix-menu*/
+@media screen and (max-width: 768px) {
+  .big-stickers-third-page {
+    width: 100%;
+  }
+
+  .button-etape-suivante {
+    margin-top: 20px;
+  }
+
+  .container {
+    flex-direction: column; /* pour le body incluant la sidebar
+    au lieu d'un affichage côte à côte 
+    évite recouvrement par la sidebar */
+    height: auto;
+    width: 100vw;/**toute la largeur visible de l'écran*/
+  }
+  .sidebar {
+    width: 100%;
+    height: auto;
+    order: 2;
+
+  }
+
+  .homepage-choix-menu {
+    width: 100%;
+    height: auto;
+    flex:none;
+  }
+.fleches {
+    display: none; /* cache les flèches sur mobile */
+  }
+
+  .slider-scroll {
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .mini-stickers {
+    flex: 0 0 auto;
+    width: 100px;
+  }
+
 }
 
