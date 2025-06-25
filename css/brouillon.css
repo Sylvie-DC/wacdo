@@ -1,25 +1,18 @@
-.home-card {
-  /* comme le carré 
-    d'accueil bonjour*/
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 698px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  margin: 0 auto; /* center le block horizontalement */
-  padding: 30px;
-  box-shadow: 4px 4px 12px 0 rgba(0, 0, 0, 0.25);
-}
 
-.homepage {
-  /*correspond à tout le body incluant buttons et sidebars*/
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  height: 100vh;
-  position: relative;
-  padding-bottom: 30px; /* espace en bas */
-}
+            /* quantite */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 0px;
+gap: 115px;
+
+position: relative;
+width: 283px;
+height: 76px;
+
+background: #FFFFFF;
+box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+border-radius: 8px;
