@@ -1,7 +1,48 @@
+.bouton-container-quantity{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;/*****/
+  gap: 115px;/******/
 
-            /* quantite */
+  position: relative;
+  width: 283px;
+  height: 76px;
 
-/* Auto layout */
+  background: #FFFFFF;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+}
+
+.button-minus{
+  margin: 0 auto;
+  width: 76px;
+  height: 76px;
+  background: #FFC400;
+  border-radius: 8px;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.button-plus{
+margin: 0 auto;
+width: 76px;
+height: 76px;
+
+background: #FFC400;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+}
+.button-value{
 display: flex;
 flex-direction: row;
 justify-content: space-between;
@@ -9,10 +50,14 @@ align-items: center;
 padding: 0px;
 gap: 115px;
 
-position: relative;
+position: absolute;
 width: 283px;
 height: 76px;
+left: calc(50% - 283px/2);
+top: 440px;
 
 background: #FFFFFF;
 box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
 border-radius: 8px;
+}
+
